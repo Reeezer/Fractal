@@ -4,7 +4,8 @@
 
 Circle::Circle(Drawing *drawing, int x, int y, int radius)
 	: Shape(drawing), x(x), y(y), radius(radius)
-{}
+{
+}
 
 void Circle::draw()
 {

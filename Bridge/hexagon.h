@@ -6,13 +6,14 @@
 class Hexagon : public Shape
 {
 public:
-	Hexagon(Drawing *, int, int, int, int);
+	Hexagon(Drawing *, int, int, int, int, float);
 
 	void draw() override;
 
 private:
 	int x, y;
 	int h, w;
+	float angle;
 };
 
 #endif // HEXAGON_H

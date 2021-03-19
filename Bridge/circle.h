@@ -9,8 +9,8 @@ public:
 	Circle(Drawing *, int, int, int);
 
 	void draw() override;
-private:
 
+private:
 	int x, y;
 	int radius;
 };
