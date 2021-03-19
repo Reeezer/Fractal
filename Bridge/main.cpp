@@ -11,8 +11,8 @@ int main (int argc, char **argv)
 	Drawing *drawing = new DrawingV1();
 
 	Shape *circle = new Circle(drawing, 200, 300, 30);
-	Shape *hexagon = new Hexagon(drawing, 400, 20, 40, 40, 45.f);
-	Shape *rect = new Rectangle(drawing, 100, 100, 200, 100, 45.f);
+	Shape *hexagon = new Hexagon(drawing, 400, 20, 40, 45.f);
+	Shape *rect = new Rectangle(drawing, 100, 100, 200, 100, 3.14f);
 
 	circle->draw();
 	hexagon->draw();

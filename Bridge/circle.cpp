@@ -9,5 +9,12 @@ Circle::Circle(Drawing *drawing, int x, int y, int radius)
 
 void Circle::draw()
 {
-	std::cout << "Drawing a Circle!" << std::endl;
+	std::cout << "drawing a circle" << std::endl;
+	drawing->push();
+
+	drawing->translate(x, y);
+
+	drawing->drawCircle(x, y, radius);
+
+	drawing->pop();
 }

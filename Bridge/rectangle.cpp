@@ -8,5 +8,16 @@ Rectangle::Rectangle(Drawing *drawing, int x, int y, int h, int w, float angle)
 
 void Rectangle::draw()
 {
-	std::cout << "Drawing a Rectangle!" << std::endl;
+	std::cout << "drawing a rectangle" << std::endl;
+	drawing->push();
+
+	drawing->translate(x, y);
+	drawing->rotate(angle);
+
+	drawing->drawLine(0, 0, w, 0);
+	drawing->drawLine(w, 0, w, h);
+	drawing->drawLine(w, h, 0, h);
+	drawing->drawLine(0, h, 0, 0);
+
+	drawing->pop();
 }
