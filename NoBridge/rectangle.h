@@ -5,12 +5,12 @@
 
 class Rectangle : public Shape {
     public:
-        Rectangle(double, double, double, double);
+        Rectangle(double, double, double, double, double);
         virtual void draw();
     protected:
-        virtual void drawLine(double, double, double, double);
+        virtual void drawLine(double, double, double, double, double);
     private:
-        double x1, x2, y1, y2;
+        double x, y, w, h, angle;
 };
 
 #endif //RECTANGLE_H

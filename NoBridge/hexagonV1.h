@@ -6,9 +6,9 @@
 class HexagonV1 : public Hexagon
 {
 public:
-	HexagonV1(double, double, double, double, double);
+	HexagonV1(double, double, int, double);
 
-	virtual void drawLine(double, double, double, double);
+	virtual void drawLine(double, double, int, double);
 };
 
 #endif // HEXAGONV1_H

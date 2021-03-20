@@ -5,9 +5,9 @@
 
 class CircleV2 : public Circle {
     public:
-        CircleV2(double, double, double);
+        CircleV2(double, double, int);
     protected:
-        virtual void drawCircle(double, double, double);
+        virtual void drawCircle(double, double, int);
 };
 
 #endif //CircleV2

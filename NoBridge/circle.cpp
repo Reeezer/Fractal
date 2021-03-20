@@ -1,14 +1,13 @@
 #include <iostream>
-
 #include "circle.h"
 
-Circle::Circle(double x, double y, double r){
+Circle::Circle(double x, double y, int radius){
     this->x = x;
     this->y = y;
-    this->r = r;
+    this->radius = radius;
 }
 
 void Circle::draw(){}
 
 
-void Circle::drawCircle(double x, double y, double r){}
+void Circle::drawCircle(double x, double y, int radius){}

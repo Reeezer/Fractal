@@ -6,13 +6,13 @@
 class Hexagon : public Shape
 {
 public:
-	Hexagon(double,double,double,double,double);
+	Hexagon(double,double,int,double);
 	void draw();
 protected:
-	virtual void drawLine(double,double,double,double);
+	virtual void drawLine(double,double,int,double);
 private:
 	double x, y;
-	double h, w;
+	int radius;
 	double angle;
 };
 

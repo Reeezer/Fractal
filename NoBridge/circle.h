@@ -6,15 +6,15 @@
 class Circle : public Shape{
 
     public:
-        Circle(double x, double y, double r);
+        Circle(double,double,int);
         ~Circle();
         void draw();
     
     protected:
-        void drawCircle(double x, double y, double r);
+        void drawCircle(double,double,int);
 
     private : 
-        double x, y, r;
+        double x, y, radius;
 
 };
 

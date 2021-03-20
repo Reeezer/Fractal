@@ -5,9 +5,9 @@
 
 class RectangleV2 : public Rectangle {
     public:
-        RectangleV2(double, double, double, double);
+        RectangleV2(double, double, double, double, double);
     protected:
-        void drawLine(double, double, double, double);
+        void drawLine(double, double, double, double, double);
 };
 
 #endif //RECTANGLEV2_H
