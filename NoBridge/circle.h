@@ -8,11 +8,9 @@ class Circle : public Shape{
     public:
         Circle(double,double,int);
         ~Circle();
-        void draw();
-    
+        void draw() override;
     protected:
-        void drawCircle(double,double,int);
-
+        virtual void drawCircle(double,double,int)=0;
     private : 
         double x, y, radius;
 

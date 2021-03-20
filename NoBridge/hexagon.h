@@ -7,9 +7,9 @@ class Hexagon : public Shape
 {
 public:
 	Hexagon(double,double,int,double);
-	void draw();
+	void draw() override;
 protected:
-	virtual void drawLine(double,double,int,double);
+	virtual void drawLine(double, double, double, double) = 0;
 private:
 	double x, y;
 	int radius;

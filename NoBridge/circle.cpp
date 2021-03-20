@@ -7,7 +7,16 @@ Circle::Circle(double x, double y, int radius){
     this->radius = radius;
 }
 
-void Circle::draw(){}
+Circle::~Circle(){}
 
+void Circle::draw(){
+    std::cout << "drawing a circle" << std::endl;
 
-void Circle::drawCircle(double x, double y, int radius){}
+	pushMatrix();
+
+	translatePosition(x, y);
+
+	drawCircle(x, y, radius);
+
+	popMatrix();
+}

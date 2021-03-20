@@ -6,17 +6,22 @@
 RectangleV2::RectangleV2(double x, double y, double w, double h, double angle) : Rectangle(x,y,w,h,angle)
 {}
 
-void Rectangle::drawLine(double x, double y, double w, double h, double angle){
-    std::cout << "drawing a rectangle" << std::endl;
-	glPushMatrix();
+void RectangleV2::drawLine(double x1, double y1, double x2, double y2){
+	glutDrawLine(x1,x2,y1,y2);
+}
 
-	glutTranslate2D(x, y);
+void RectangleV2::rotateAngle(double angle){
 	glutRotate2D(angle);
+}
 
-	glutDrawLine(0, 0, w, 0);
-	glutDrawLine(w, 0, w, h);
-	glutDrawLine(w, h, 0, h);
-	glutDrawLine(0, h, 0, 0);
+void RectangleV2::translatePosition(double x, double y){
+	glutTranslate2D(x,y);
+}
 
-	glPopMatrix;
+void RectangleV2::pushMatrix(){
+	glPushMatrix();
+}
+
+void RectangleV2::popMatrix(){
+	glPopMatrix();
 }

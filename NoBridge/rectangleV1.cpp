@@ -6,17 +6,22 @@
 RectangleV1::RectangleV1(double x, double y, double h, double w, double angle) : Rectangle(x,y,h,w,angle)
 {}
 
-void Rectangle::drawLine(double x, double y, double h, double w, double angle){
-    std::cout << "drawing a rectangle" << std::endl;
-	push_matrix();
+void RectangleV1::drawLine(double x1, double y1, double x2, double y2){
+    draw_line(x1,x2,y1,y2);
+}
 
-	translate_position(x, y);
+void RectangleV1::rotateAngle(double angle){
 	rotate_angle(angle);
+}
 
-	draw_line(0, 0, w, 0);
-	draw_line(w, 0, w, h);
-	draw_line(w, h, 0, h);
-	draw_line(0, h, 0, 0);
+void RectangleV1::translatePosition(double x, double y){
+	translate_position(x,y);
+}
 
+void RectangleV1::pushMatrix(){
+	push_matrix();
+}
+
+void RectangleV1::popMatrix(){
 	pop_matrix();
 }

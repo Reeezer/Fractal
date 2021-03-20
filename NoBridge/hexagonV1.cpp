@@ -5,19 +5,22 @@
 HexagonV1::HexagonV1(double x, double y, int radius, double angle) : Hexagon(x,y,radius,angle)
 {}
 
-void HexagonV1::drawLine(double x, double y, int radius, double angle){
-    std::cout << "drawing a hexagon" << std::endl;
-	pop_matrix;
+void HexagonV1::drawLine(double x1, double y1, double x2, double y2){    
+	draw_line(x1,x2,y1,y2); 
+}
 
-	translate_position(x, y);
+void HexagonV1::rotateAngle(double angle){
 	rotate_angle(angle);
+}
 
-	for (int i = 0; i < 6; i++)
-	{
-		//  sqrt(3) = 1.73205080757
-		draw_line(-radius, 0,  -radius * 1.73205080757 / 2, -radius / 2);
-		rotate_angle(3.1415 / 3);
-	}
+void HexagonV1::translatePosition(double x, double y){
+	translate_position(x,y);
+}
 
-	pop_matrix();    
+void HexagonV1::pushMatrix(){
+	push_matrix();
+}
+
+void HexagonV1::popMatrix(){
+	pop_matrix();
 }

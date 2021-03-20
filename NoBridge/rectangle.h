@@ -5,10 +5,10 @@
 
 class Rectangle : public Shape {
     public:
-        Rectangle(double, double, double, double, double);
-        virtual void draw();
+        Rectangle(double, double, double, double, double);    
+        void draw() override;
     protected:
-        virtual void drawLine(double, double, double, double, double);
+        virtual void drawLine(double, double, double, double) = 0;
     private:
         double x, y, w, h, angle;
 };

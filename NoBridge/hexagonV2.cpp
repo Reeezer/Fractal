@@ -5,19 +5,22 @@
 HexagonV2::HexagonV2(double x, double y, int radius, double angle) : Hexagon(x, y, radius, angle)
 {}
 
-void HexagonV2::drawLine(double x, double y, int radius, double angle){
-    std::cout << "drawing a hexagon" << std::endl;
-	glPushMatrix;
+void HexagonV2::drawLine(double x1, double y1, double x2, double y2){
+	glutDrawLine(x1,x2,y1,y2);
+}
 
-	glutTranslate2D(x, y);
+void HexagonV2::rotateAngle(double angle){
 	glutRotate2D(angle);
+}
 
-	for (int i = 0; i < 6; i++)
-	{
-		//  sqrt(3) = 1.73205080757
-		glutDrawLine(-radius, 0,  -radius * 1.73205080757 / 2, -radius / 2);
-		glutRotate2D(3.1415 / 3);
-	}
+void HexagonV2::translatePosition(double x, double y){
+	glutTranslate2D(x,y);
+}
 
+void HexagonV2::pushMatrix(){
+	glPushMatrix();
+}
+
+void HexagonV2::popMatrix(){
 	glPopMatrix();
 }

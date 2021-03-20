@@ -7,7 +7,11 @@ class CircleV1 : public Circle {
     public:
         CircleV1(double, double, int);
     protected:
-        virtual void drawCircle(double, double, int);
+        void drawCircle(double, double, int) override;
+        void rotateAngle(double) override;
+        void translatePosition(double,double) override;
+        void pushMatrix() override;
+        void popMatrix() override;
 };
 
 #endif //circleV1_H

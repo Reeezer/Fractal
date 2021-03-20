@@ -10,7 +10,17 @@ Rectangle::Rectangle(double x, double y, double w, double h, double angle){
     this->angle = angle;
 }
 
-void Rectangle::draw(){}
+void Rectangle::draw(){
+    std::cout << "drawing a rectangle" << std::endl;    
+    pushMatrix();
 
+    translatePosition(x,y);
+    rotateAngle(angle);
 
-void Rectangle::drawLine(double x, double y, double w, double h, double angle){}
+    drawLine(0, 0, w, 0);
+	drawLine(w, 0, w, h);
+	drawLine(w, h, 0, h);
+	drawLine(0, h, 0, 0);
+
+    popMatrix();
+}
