@@ -12,7 +12,8 @@ class Circle : public Shape{
     protected:
         virtual void drawCircle(double,double,int)=0;
     private : 
-        double x, y, radius;
+        double x, y;
+        int radius;
 
 };
 
