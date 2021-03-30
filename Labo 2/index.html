@@ -7,23 +7,23 @@
 	<body onload="load();">
 		<p>
 			<label>Colors (RGB) : </label>
-			<input type="number" id="red" name="red" min="0" max="255" onchange="load();" placeholder="Red"/>
-			<input type="number" id="green" name="green" min="0" max="255" onchange="load();" placeholder="Green"/>
-			<input type="number" id="blue" name="blue" min="0" max="255" onchange="load();" placeholder="Blue"/>
+			<input type="number" id="red" name="red" min="0" max="255" onchange="load();" placeholder="Red" value="150"/>
+			<input type="number" id="green" name="green" min="0" max="255" onchange="load();" placeholder="Green" value="50"/>
+			<input type="number" id="blue" name="blue" min="0" max="255" onchange="load();" placeholder="Blue" value="0"/>
 		</p>
 		<p>
 			<label>Sizes : </label>
-			<input type="number" id="size" name="size" min="0" max="100" onchange="load();" placeholder="Length"/>
-			<input type="number" id="thickness" name="thickness" min="0" max="50" onchange="load();" placeholder="Width"/>
+			<input type="number" id="size" name="size" min="0" max="100" onchange="load();" placeholder="Length" value="100"/>
+			<input type="number" id="thickness" name="thickness" min="0" max="50" onchange="load();" placeholder="Width" value="10"/>
 		</p>
 		<p>
 			<label>Number of branches : </label>
-			<input type="number" id="nbBranch" name="nbBranch" min="0" max="40" onchange="load();" placeholder="Branch"/>
+			<input type="number" id="nbBranch" name="nbBranch" min="0" max="40" onchange="load();" placeholder="Branch" value="25"/>
 		</p>
 		<p>
 			<button onclick="randomize();">Randomize</button>
 		</p>
 		
-		<canvas id="canvas" width="1000" height="1500"></canvas>
+		<canvas id="canvas" width="1000" height="700"></canvas>
 	</body>
 </html>
