@@ -6,7 +6,7 @@ class Fractal{
         this.size = size;
         this.thickness = thickness;
         this.nbBranchLeft = nbBranchLeft;
-        this.branches = [];
+        this.branches = []; // tab of Fractal
         this.color = color;
         this.context2D = context2D;
         this.rgb = rgb;

@@ -2,7 +2,8 @@ class Fractal{
     static instanceFlag = false;
     static single = null;
 
-    setParams(x, y, nbBranchLeft, size, thickness, angle, color, context2D, rgb) {
+    setParams(x, y, nbBranchLeft, size, thickness, angle, color, context2D, rgb) 
+    {
         this.x = x;
         this.y = y;
         this.angle = angle;
@@ -14,7 +15,8 @@ class Fractal{
         this.rgb = rgb;
     }
 
-    static getInstance() {
+    static getInstance() 
+    {
         if (!Fractal.instanceFlag){
             Fractal.instanceFlag = true;
             Fractal.single = new Fractal();
@@ -22,11 +24,13 @@ class Fractal{
         return Fractal.single;
     }
 
-    draw() {
+    draw() 
+    {
         this.drawStroke(this.x, this.y, this.nbBranchLeft, this.size, this.thickness, this.angle, this.color, this.context2D, this.rgb);
     }
 
-    drawStroke(x, y, nbBranchLeft, size, thickness, angle, color, context2D, rgb) {
+    drawStroke(x, y, nbBranchLeft, size, thickness, angle, color, context2D, rgb) 
+    {
         context2D.beginPath();
         context2D.save();
 
@@ -94,6 +98,8 @@ function randomize()
     document.getElementById("size").value = Math.floor(Math.random() * Math.floor(100)) + 50;
     document.getElementById("thickness").value = Math.floor(Math.random() * Math.floor(20));
     document.getElementById("nbBranch").value = Math.floor(Math.random() * Math.floor(25)) + 5;   
+    // On ne met pas un random pouvant prendre l'intégralité des valeurs possibles car l'arbre créé est un peu plus uniforme et ressemble plus à un arbre
+    // En revanche il est possible de passer outre et mettre à la main les valeurs 
 
     load();
 }
