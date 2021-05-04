@@ -47,11 +47,15 @@ class Fractal{
 
 function limitValue(value, max)
 {
-    if (value > max)
+    if (value > max) {
         return max;
-    else if (value < 0)
+    }
+    else if (value < 0) {
         return 0;
-    else return value;
+    }
+    else {
+        return value;
+    }
 }
 
 function load()
@@ -70,7 +74,7 @@ function load()
     let thickness = document.getElementById("thickness").value.length > 0 ? limitValue(parseInt(document.getElementById("thickness").value), 50) : 10;
     let nbBranch = document.getElementById("nbBranch").value.length > 0 ? limitValue(parseInt(document.getElementById("nbBranch").value), 255) : 25;
 
-    root = new Fractal(500, 650, nbBranch, size, thickness, 0, 0, context2D, rgb);
+    let root = new Fractal(500, 650, nbBranch, size, thickness, 0, 0, context2D, rgb);
     root.draw()
 }
 
