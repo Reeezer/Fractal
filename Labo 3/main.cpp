@@ -1,12 +1,12 @@
 #include <iostream>
 
-#include "decoratorA.hpp"
-#include "decoratorB.hpp"
+#include "Decorator/decoratorA.hpp"
+#include "Decorator/decoratorB.hpp"
 
-#include "panier.hpp"
-#include "akebia.hpp"
-#include "kiwano.hpp"
-#include "ramboutan.hpp"
+#include "Composite/panier.hpp"
+#include "Composite/akebia.hpp"
+#include "Composite/kiwano.hpp"
+#include "Composite/ramboutan.hpp"
 
 int main(void)
 {
@@ -24,17 +24,25 @@ int main(void)
 
     Fruit *decoA = new DecoratorA(kiwano);
     Fruit *decoB = new DecoratorB(basketEncorePlusDedans);
-    Fruit *decoBB = new DecoratorB(decoB);
+
+    // for science (not deallocated however but at least it's short to write)
+    Fruit *decoAAABBBA = new DecoratorA(new DecoratorA(new DecoratorA(new DecoratorB(new DecoratorB(new DecoratorB(new DecoratorA(new Kiwano())))))));
+    decoAAABBBA->exist();
+    decoAAABBBA->exist();
+    decoAAABBBA->exist();
+    decoAAABBBA->exist();
+    decoAAABBBA->exist();
 
     basketEncorePlusDedans->addFruit(ramboutantantan);
 
-    basketDedans->addFruit(decoBB);
+    basketDedans->addFruit(decoB);
     basketDedans->addFruit(ramboutan);
     basketDedans->addFruit(kiwanoLeRetour);
 
     basketDehors->addFruit(decoA);
     basketDehors->addFruit(akebia);
     basketDehors->addFruit(basketDedans);
+    basketDehors->addFruit(decoAAABBBA);
 
     // Afficher le panier
     basketDehors->afficherFruit();

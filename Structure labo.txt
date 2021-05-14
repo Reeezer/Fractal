@@ -1,0 +1,26 @@
+/*-----------------
+  Design Patterns
+  Labo XX
+  Equipe YY : M./Mme [...]
+------------------*/
+
+1. Structure source
+
+
+2. Ameliorations possibles
+
+
+3. Le DP
+3.1 Faiblesse
+
+3.2 Forces
+
+
+4. Conclusion
+
+___________________
+
+Option : Questions 
+- 
+- 
+- 

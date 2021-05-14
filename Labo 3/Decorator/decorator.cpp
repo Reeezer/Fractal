@@ -13,3 +13,8 @@ void Decorator::afficherFruit(std::string prefix)
 {
 	m_fruit->afficherFruit(prefix);
 }
+
+void Decorator::exist()
+{
+	m_fruit->exist();
+}

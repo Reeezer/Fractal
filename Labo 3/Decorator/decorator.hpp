@@ -1,7 +1,7 @@
 #ifndef DECORATOR_H
 #define DECORATOR_H
 
-#include "fruit.hpp"
+#include "../Composite/fruit.hpp"
 
 class Decorator : public Fruit
 {
@@ -13,6 +13,7 @@ public:
 	~Decorator();
 
 	void afficherFruit(std::string prefix = "");
+	virtual void exist() override;
 };
 
 #endif

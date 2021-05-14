@@ -1,1 +1,1 @@
-g++ *.cpp -o labo3
+g++ *.cpp Composite/*.cpp Decorator/*.cpp State/*.cpp -o labo3 -g
