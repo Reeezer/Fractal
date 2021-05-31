@@ -1,7 +1,6 @@
-abstract factory - builder - decorator - fly weight
+builder - decorator - fly weight
 
 Menu de pizza, burger, frites etc..
-- l'abstract factory crée les différents éléments (pizza, burger ...) pour créer le menu
 - le builder spécialise les éléments (pizza reine, hawaienne ...)
 - le decorator permet de mettre le topping en fonction de la classe
 - le fly weight permet de stocker les images utilisées pour l'affichage
